@@ -8,6 +8,7 @@ const devHistoryApiFallback = require('./dev-history-api-fallback')
 const app = express()
 app.use(cors())
 app.use(express.json())
+const axios = require('axios')
 
 require('dotenv').config()
 
@@ -52,6 +53,32 @@ app.get('/zkouska', async (req, res) => {
 	}
 
 	res.json(responseData)
+})
+
+app.get('/api/widget-data', async (req, res) => {
+	const payload = req.headers['x-payload']
+	const path = req.headers['x-path']
+	const token = req.headers['x-token']
+	const url = process.env.PUBLIC_API_URL + '/3/omni/metrics'
+	try {
+		const response = await axios.post(url, payload, {
+			headers: {
+				Authorization: `Bearer ${token}`,
+				'content-type': `application/json`,
+				'x-sbks-token': `oauth`,
+				'x-sbks-data-endpoint': `POST ${path}`,
+			},
+		})
+		res.json(response.data)
+	} catch (error) {
+		res.status(500).json({ error: error })
+	}
+})
+
+app.get('/get-token', (req, res) => {
+	const token = process.env.ACCESS_TOKEN
+	console.log(token)
+	res.status(200).json({ token })
 })
 
 start().catch((e) => {

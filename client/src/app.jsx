@@ -5,53 +5,25 @@ import {
 	useQuery,
 } from '@tanstack/react-query'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import MainPage from './components/main-page'
+import MyCharts from './components/my-charts'
+import UnifiedAnalytics from './components/unified-analytics'
+import { prejson, vision } from '../../assets/embedding'
+export const Vision = vision.Vision
+export const VisionContextProvider = vision.VisionContextProvider
+export const PreJSON = prejson.PreJSON
 
 const queryClient = new QueryClient()
-
-const fetchData = async () => {
-	console.log('CEKAM NA DATA')
-	const response = await fetch('/zkouska', {
-		method: 'GET',
-		headers: {
-			'Content-Type': 'application/json',
-		},
-	})
-
-	if (!response.ok) {
-		throw new Error('Failed to fetch data')
-	}
-
-	return response.json()
-}
-
-const Home = () => {
-	const { data: widgetData, isLoading: isWidgetDataLoading } = useQuery({
-		queryKey: ['klic123'],
-		queryFn: async () => await fetchData(),
-	})
-
-	return (
-		<>
-			State: {isWidgetDataLoading ? 'Loading...' : 'Loaded'} Data:{' '}
-			{widgetData ? JSON.stringify(widgetData) : 'No data'}
-		</>
-	)
-}
 
 const App = () => {
 	return (
 		<BrowserRouter>
 			<QueryClientProvider client={queryClient}>
 				<Routes>
-					<Route path='/lukas' element={<Home />} />
-					<Route
-						path='/'
-						element={
-							<div>
-								<h1>Embedded screen prototype</h1>HUUUUUU
-							</div>
-						}
-					/>
+					<Route path='/ua' element={<UnifiedAnalytics />} />
+					<Route path='/random' element={<MyCharts />} />
+
+					<Route path='/' element={<MainPage />} />
 				</Routes>
 			</QueryClientProvider>
 		</BrowserRouter>

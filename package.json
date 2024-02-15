@@ -11,6 +11,9 @@
 		"heroku-postbuild": "npm run build",
 		"postinstall": "./scripts/postinstall.sh"
 	},
+	"engines": {
+		"node": "20.3.1"
+	},
 	"keywords": [],
 	"author": "",
 	"license": "ISC",

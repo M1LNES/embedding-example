@@ -61,6 +61,9 @@ app.get('/api/widget-data', async (req, res) => {
 	const token = req.headers['x-token']
 	const url = process.env.PUBLIC_API_URL + '/3/omni/metrics'
 	try {
+		console.log('Je to tady')
+		console.log(payload, path, token, url)
+
 		const response = await axios.post(url, payload, {
 			headers: {
 				Authorization: `Bearer ${token}`,
@@ -71,6 +74,7 @@ app.get('/api/widget-data', async (req, res) => {
 		})
 		res.json(response.data)
 	} catch (error) {
+		console.log('Je to ko')
 		res.status(500).json({ error: error })
 	}
 })

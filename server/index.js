@@ -77,7 +77,6 @@ app.get('/api/widget-data', async (req, res) => {
 
 app.get('/get-token', (req, res) => {
 	const token = process.env.ACCESS_TOKEN
-	console.log(token)
 	res.status(200).json({ token })
 })
 

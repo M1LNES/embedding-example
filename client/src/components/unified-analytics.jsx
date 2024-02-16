@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Vision, VisionContextProvider, PreJSON } from '../app'
 import { ua_schema } from '../schemas/widget-schemas'
 import { fetchDataAllRequests } from '../functions/functions'
-import { alert_data_request } from '../schemas/data-request-schemas'
+import { ua_data_request } from '../schemas/data-request-schemas'
 
 const UnifiedAnalytics = () => {
 	const [data, setData] = useState(null)
@@ -10,7 +10,7 @@ const UnifiedAnalytics = () => {
 	useEffect(() => {
 		const fetchData = async () => {
 			try {
-				const response = await fetchDataAllRequests(alert_data_request)
+				const response = await fetchDataAllRequests(ua_data_request)
 				setData(response)
 			} catch (error) {
 				console.error('Error fetching data:', error)

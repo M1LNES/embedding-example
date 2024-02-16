@@ -11,7 +11,6 @@ const MyCharts = () => {
 		const fetchData = async () => {
 			try {
 				const response = await fetchDataAllRequests(alert_data_request)
-				console.log(response)
 
 				setData(response)
 			} catch (error) {
@@ -25,7 +24,7 @@ const MyCharts = () => {
 	if (data === null) {
 		return <h3>LOADING DATA</h3>
 	}
-
+	console.log(data)
 	return (
 		<>
 			<h1>Random Charts from Omni studio</h1>

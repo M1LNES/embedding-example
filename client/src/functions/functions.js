@@ -18,14 +18,12 @@ export async function fetchDataAllRequests(requestsExpanded) {
 
 async function fetchDataFromRequest(path, payload) {
 	try {
-		// const token_response = await fetch('/get-token', {
-		// 	method: 'GET',
-		// })
-		// console.log(token_response)
-		// const token = await token_response.json()
-		// console.log('Token: ', token)
-		const token = { token: '0IsM4SJ1mgBk8aRkywH-c-YpCWSmKJTwAgGDlEtpD4-' }
-		console.log(token)
+		const token_response = await fetch('/get-token', {
+			method: 'GET',
+		})
+
+		const token = await token_response.json()
+
 		const response = await fetch('/api/widget-data', {
 			method: 'GET',
 			headers: {
@@ -41,7 +39,7 @@ async function fetchDataFromRequest(path, payload) {
 		const data = await response.json()
 		return data
 	} catch (error) {
-		console.error('CHYBA')
+		console.error('CHYBA:', error)
 		return null
 	}
 }

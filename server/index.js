@@ -18,7 +18,7 @@ const DIST_DIR = path.resolve(__dirname, '../dist')
 const start = () => {
 	let wdMiddleware = null
 
-	if (process.env.ENVIRONMENT_NAME === 'production') {
+	if (process.env.NODE_ENV === 'production') {
 		app.use('/vendor', express.static(path.resolve(DIST_DIR, 'vendor')))
 		app.use(express.static(DIST_DIR))
 		app.use(

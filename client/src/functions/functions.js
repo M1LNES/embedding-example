@@ -18,7 +18,7 @@ export async function fetchDataAllRequests(requestsExpanded) {
 
 async function fetchDataFromRequest(path, payload) {
 	try {
-		const token_response = await fetch('/get-token', {
+		const token_response = await fetch('/api/get-token', {
 			method: 'GET',
 		})
 

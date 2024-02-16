@@ -45,16 +45,6 @@ const start = () => {
 	})
 }
 
-app.get('/zkouska', async (req, res) => {
-	console.log('Jo jsem tu jako by')
-	const responseData = {
-		message: 'PRDEL MORE',
-		additionalInfo: 'Any additional information you want to send',
-	}
-
-	res.json(responseData)
-})
-
 app.get('/api/widget-data', async (req, res) => {
 	const payload = req.headers['x-payload']
 	const path = req.headers['x-path']
@@ -75,7 +65,7 @@ app.get('/api/widget-data', async (req, res) => {
 	}
 })
 
-app.get('/get-token', (req, res) => {
+app.get('/api/get-token', (req, res) => {
 	const token = process.env.ACCESS_TOKEN
 	res.status(200).json({ token })
 })

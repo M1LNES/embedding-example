@@ -22,7 +22,12 @@ async function fetchDataFromRequest(path, payload) {
 			method: 'GET',
 		})
 
-		const token = await token_response.json()
+		if (token_response.ok) {
+			const token = await token_response.json()
+			console.log('Token:', token)
+		} else {
+			console.error('Failed to fetch token:', token_response.statusText)
+		}
 
 		const response = await fetch('/api/widget-data', {
 			method: 'GET',

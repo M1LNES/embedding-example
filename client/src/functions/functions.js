@@ -18,13 +18,14 @@ export async function fetchDataAllRequests(requestsExpanded) {
 
 async function fetchDataFromRequest(path, payload) {
 	try {
-		const token_response = await fetch('/get-token', {
-			method: 'GET',
-		})
-		console.log(token_response)
-		const token = await token_response.json()
-		console.log('Token: ', token)
-
+		// const token_response = await fetch('/get-token', {
+		// 	method: 'GET',
+		// })
+		// console.log(token_response)
+		// const token = await token_response.json()
+		// console.log('Token: ', token)
+		const token = { token: '0IsM4SJ1mgBk8aRkywH-c-YpCWSmKJTwAgGDlEtpD4-' }
+		console.log(token)
 		const response = await fetch('/api/widget-data', {
 			method: 'GET',
 			headers: {

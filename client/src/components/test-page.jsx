@@ -1,145 +1,123 @@
 import React from 'react'
-import PageTemplate from './page-template'
+import GitHubIcon from '@mui/icons-material/GitHub'
+import XIcon from '@mui/icons-material/X'
+import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import Widget from './widget'
 
 const TestPage = () => {
 	return (
-		<PageTemplate title='Welcome to My Page'>
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vulputate
-				est ac augue tincidunt vehicula. Proin porttitor tellus in sem
-				vulputate, ut consectetur nisl consectetur. Maecenas velit mi, dignissim
-				a feugiat ac, porta eget felis. Maecenas cursus erat a convallis
-				euismod. Sed sed urna vestibulum, varius urna vel, commodo purus.
-				Pellentesque tempor tempus risus, vel lacinia ligula fermentum rutrum.
-				Sed at metus ac arcu semper sodales. Morbi eget felis feugiat eros
-				faucibus tincidunt nec ut orci. Sed tempus, turpis ac tempor vehicula,
-				mi tortor vestibulum nibh, dapibus accumsan felis erat eget neque. Etiam
-				auctor urna eu nunc feugiat, quis vulputate tortor porta. In semper
-				fringilla ex, eget vestibulum lorem sodales in. Praesent nec ligula
-				bibendum metus auctor consectetur pellentesque eget mauris. Mauris ut
-				posuere diam. Nullam ut rutrum dolor, quis vulputate dui. Lorem ipsum
-				dolor sit amet, consectetur adipiscing elit. Donec ultricies eros sed
-				felis tempor molestie. Proin sit amet sem augue. Orci varius natoque
-				penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-				Vivamus eu est ultricies, eleifend metus efficitur, porttitor velit.
-				Suspendisse ultricies ipsum et rutrum elementum. Pellentesque pretium
-				nec odio vel blandit. Integer sodales tellus risus, sed interdum urna
-				semper quis. Sed ultrices felis id massa euismod pretium. Morbi et
-				tellus lectus. Donec diam velit, auctor vel velit sed, malesuada aliquet
-				orci. Ut euismod congue blandit. Fusce non accumsan eros, a egestas
-				erat. Morbi non mattis felis. Phasellus ullamcorper ex nec metus
-				ultrices auctor. Vivamus ac neque felis. Suspendisse laoreet mi et
-				commodo suscipit. Curabitur fringilla velit non tempus consectetur.
-				Quisque pulvinar semper urna. Fusce quis sollicitudin massa. Aenean
-				vestibulum ligula eu metus pulvinar sollicitudin. Integer turpis enim,
-				bibendum sit amet pharetra vitae, lobortis eget purus. Integer eget
-				risus faucibus, venenatis mi vitae, egestas ante. Curabitur auctor
-				blandit arcu sit amet posuere. Pellentesque congue massa nec fermentum
-				sollicitudin. Donec consequat orci turpis, vitae congue enim porta eu.
-				Donec commodo elementum erat, sit amet ultrices nisi ullamcorper sit
-				amet. Donec venenatis ex finibus leo vestibulum scelerisque. Vestibulum
-				sit amet est aliquet, efficitur diam a, viverra metus. Mauris finibus
-				tempor ullamcorper. Aliquam eleifend, dolor eu lobortis imperdiet,
-				sapien neque venenatis felis, in dignissim augue tortor in magna.
-				Integer vel pellentesque ligula. Duis dui diam, efficitur quis lobortis
-				et, fringilla ac ligula. Fusce ante felis, gravida non pulvinar id,
-				commodo at libero. Nullam pellentesque quam ac ante convallis tempor.
-				Nullam maximus elementum urna, pellentesque dapibus massa ullamcorper
-				ut. Nullam dictum massa a sodales pretium. Nulla commodo, urna eu
-				consectetur venenatis, tortor velit malesuada odio, sit amet gravida
-				purus sapien in libero.
-			</p>
-			<Widget
-				boardID={1684}
-				widgetID={25633}
-				params={`[
-				{
-					"value": "P30D/now[sD]",
-					"name": "cas",
-					"type": "daterange"
-				}
-				]`}
-				height={300}
-			/>
-			<div style={{ display: 'flex', flexDirection: 'row', gap: '10px' }}>
-				<Widget
-					boardID={1684}
-					widgetID={25620}
-					params={`[
-          {
-            "value": "P30D/now[sD]",
-            "name": "cas",
-            "type": "daterange"
-          }
-        ]`}
-					style={'{"borderStyle": "solid"}'}
-				/>
-				<Widget
-					boardID={1684}
-					widgetID={25621}
-					params={`[
-          {
-            "value": "P30D/now[sD]",
-            "name": "cas",
-            "type": "daterange"
-          }
-        ]`}
-					style={'{"borderStyle": "solid"}'}
-				/>
-				<Widget
-					boardID={1684}
-					widgetID={25630}
-					params={`[
-          {
-            "value": "P30D/now[sD]",
-            "name": "cas",
-            "type": "daterange"
-          }
-        ]`}
-					style={'{"borderStyle": "solid"}'}
-				/>
-				<Widget
-					boardID={1684}
-					widgetID={25623}
-					params={`[
-          {
-            "value": "P30D/now[sD]",
-            "name": "cas",
-            "type": "daterange"
-          }
-        ]`}
-					style={'{"borderStyle": "solid"}'}
-				/>
-			</div>
-			<div style={{ display: 'flex', flexDirection: 'row', gap: '10px' }}>
-				<Widget
-					boardID={1684}
-					widgetID={25749}
-					params={`[
-      {
-        "value": "P30D/now[sD]",
-        "name": "cas",
-        "type": "daterange"
-      }
-    ]`}
-					height={150}
-					width={800}
-					style={{ flex: '0 0 800px' }}
-				/>
-				<p style={{ flexGrow: 1, maxWidth: 'calc(100% - 810px)' }}>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
-					vulputate dictum neque, eget finibus lacus tempus sit amet. Mauris
-					semper metus eu ante posuere, eu elementum lacus finibus. Vestibulum
-					gravida pretium elementum. Mauris elementum quis nibh sed accumsan.
-					Maecenas venenatis a nunc ut aliquet. Vivamus eu ligula lectus.
-					Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc
-					consequat magna arcu, sit amet faucibus sapien tincidunt ut. Aenean
-					sed massa a enim ornare blandit eget nec metus. Cras sagittis molestie
-					eros quis congue.
+		<div
+			style={{
+				maxWidth: '800px',
+				margin: '0 auto',
+				padding: '20px',
+				fontFamily: 'Arial, sans-serif',
+				width: 800,
+				height: 800,
+			}}
+		>
+			{/* Header */}
+			<header style={{ textAlign: 'center', marginBottom: '20px' }}>
+				<h1>Welcome to Testing Webpage</h1>
+				<p>This is some text on the webpage.</p>
+			</header>
+
+			{/* Main content */}
+			<main
+				style={{
+					padding: '20px',
+					backgroundColor: '#f0f0f0',
+					borderRadius: '5px',
+				}}
+			>
+				{/* Text */}
+				<section style={{ marginBottom: '20px' }}>
+					<h2>About Me</h2>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+						ullamcorper leo ac risus hendrerit consectetur...
+					</p>
+				</section>
+
+				{/* Image/Chart */}
+				<section style={{ marginBottom: '20px' }}>
+					<h2>My Image/Chart</h2>
+					<Widget
+						boardID={2197}
+						widgetID={35916}
+						width={800}
+						height={800}
+						params={`[
+								{
+									"value": "P30D/now[sD]",
+									"name": "daterange",
+									"type": "daterange"
+								},
+								{
+									"value": "172196",
+									"name": "acl_account_id",
+									"type": "string"
+								},
+								{
+									"value": "213866",
+									"name": "user_acl_id",
+									"type": "string"
+								},
+								{
+									"value": [
+									{
+										"value": "164929129743",
+										"title": "Emplifi",
+										"picture": "https://scontent-sea1-1.xx.fbcdn.net/v/t39.30808-1/355016801_661576652675049_7066463062716805627_n.png?stp=dst-png_p200x200&_nc_cat=100&ccb=1-7&_nc_sid=4da83f&_nc_ohc=EChojOEb2rIAX-kZ1fl&_nc_ht=scontent-sea1-1.xx&edm=AJdBtusEAAAA&oh=00_AfClcKsCoiwHD1VU-0AQKK8MAS8j9QHSpoyoO539sAYNpQ&oe=65D799A6",
+										"link": "https://www.facebook.com/Emplifi",
+										"network": "facebook",
+										"screenName": "Emplifi"
+									}
+									],
+									"name": "fbProfiles",
+									"type": "array"
+								}
+								]`}
+					/>
+				</section>
+			</main>
+
+			{/* Footer */}
+			<footer style={{ textAlign: 'center', marginTop: '20px' }}>
+				<div style={{ marginBottom: '10px' }}>
+					<a
+						href='https://github.com/'
+						target='_blank'
+						rel='noopener noreferrer'
+					>
+						<GitHubIcon
+							style={{ fontSize: '24px', margin: '0 10px', color: '#000' }}
+						/>
+					</a>
+					<a
+						href='https://twitter.com/'
+						target='_blank'
+						rel='noopener noreferrer'
+					>
+						<XIcon
+							style={{ fontSize: '24px', margin: '0 10px', color: '#000' }}
+						/>
+					</a>
+					<a
+						href='https://www.linkedin.com/'
+						target='_blank'
+						rel='noopener noreferrer'
+					>
+						<LinkedInIcon
+							style={{ fontSize: '24px', margin: '0 10px', color: '#000' }}
+						/>
+					</a>
+				</div>
+				<p style={{ fontSize: '14px', color: '#666' }}>
+					© 2024 MyWebpage. All rights reserved.
 				</p>
-			</div>
-		</PageTemplate>
+			</footer>
+		</div>
 	)
 }
 

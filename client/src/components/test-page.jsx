@@ -1,18 +1,11 @@
-import React, { useState } from 'react'
+import React from 'react'
 import PageTemplate from './page-template'
 import Widget from './widget'
-import { FormControl, InputLabel, MenuItem, Select } from '@mui/material'
 
-const MyCharts = () => {
-	const [selectBoxValue, setSelectBoxValue] = useState('P7D/now[sD]')
-
-	const handleChange = (e) => {
-		setSelectBoxValue(e.target.value)
-	}
-
+const TestPage = () => {
 	return (
-		<PageTemplate title='Embedded widgets created by Milan Janoch'>
-			<p style={{ textAlign: 'justify' }}>
+		<PageTemplate title='Welcome to My Page'>
+			<p>
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vulputate
 				est ac augue tincidunt vehicula. Proin porttitor tellus in sem
 				vulputate, ut consectetur nisl consectetur. Maecenas velit mi, dignissim
@@ -57,28 +50,12 @@ const MyCharts = () => {
 				consectetur venenatis, tortor velit malesuada odio, sit amet gravida
 				purus sapien in libero.
 			</p>
-
-			<FormControl>
-				<InputLabel id='demo-simple-select-label'>Age</InputLabel>
-				<Select
-					labelId='demo-simple-select-label'
-					id='demo-simple-select'
-					value={selectBoxValue}
-					label='Date Range'
-					onChange={handleChange}
-				>
-					<MenuItem value={'P1D/now[sD]'}>Last 24 hours</MenuItem>
-					<MenuItem value={'P7D/now[sD]'}>Last Week</MenuItem>
-					<MenuItem value={'P30D/now[sD]'}>Last 30 Days</MenuItem>
-				</Select>
-			</FormControl>
-
 			<Widget
 				boardID={1684}
 				widgetID={25633}
 				params={`[
 				{
-					"value": "${selectBoxValue}",
+					"value": "P30D/now[sD]",
 					"name": "cas",
 					"type": "daterange"
 				}
@@ -91,7 +68,7 @@ const MyCharts = () => {
 					widgetID={25620}
 					params={`[
           {
-			"value": "${selectBoxValue}",
+            "value": "P30D/now[sD]",
             "name": "cas",
             "type": "daterange"
           }
@@ -103,7 +80,7 @@ const MyCharts = () => {
 					widgetID={25621}
 					params={`[
           {
-			"value": "${selectBoxValue}",
+            "value": "P30D/now[sD]",
             "name": "cas",
             "type": "daterange"
           }
@@ -115,7 +92,7 @@ const MyCharts = () => {
 					widgetID={25630}
 					params={`[
           {
-			"value": "${selectBoxValue}",
+            "value": "P30D/now[sD]",
             "name": "cas",
             "type": "daterange"
           }
@@ -127,7 +104,7 @@ const MyCharts = () => {
 					widgetID={25623}
 					params={`[
           {
-			"value": "${selectBoxValue}",
+            "value": "P30D/now[sD]",
             "name": "cas",
             "type": "daterange"
           }
@@ -141,7 +118,7 @@ const MyCharts = () => {
 					widgetID={25749}
 					params={`[
       {
-		"value": "${selectBoxValue}",
+        "value": "P30D/now[sD]",
         "name": "cas",
         "type": "daterange"
       }
@@ -150,13 +127,7 @@ const MyCharts = () => {
 					width={800}
 					style={{ flex: '0 0 800px' }}
 				/>
-				<p
-					style={{
-						flexGrow: 1,
-						maxWidth: 'calc(100% - 810px)',
-						textAlign: 'justify',
-					}}
-				>
+				<p style={{ flexGrow: 1, maxWidth: 'calc(100% - 810px)' }}>
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
 					vulputate dictum neque, eget finibus lacus tempus sit amet. Mauris
 					semper metus eu ante posuere, eu elementum lacus finibus. Vestibulum
@@ -172,4 +143,4 @@ const MyCharts = () => {
 	)
 }
 
-export default MyCharts
+export default TestPage

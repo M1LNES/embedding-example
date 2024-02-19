@@ -45,15 +45,13 @@ const start = () => {
 	})
 }
 
-app.get('/api/widget-data', async (req, res) => {
-	const payload = req.headers['x-payload']
-	const path = req.headers['x-path']
-	const token = req.headers['x-token']
+app.post('/api/widget-data', async (req, res) => {
+	const { payload, path } = req.body
 	const url = process.env.PUBLIC_API_URL + '/3/omni/metrics'
 	try {
 		const response = await axios.post(url, payload, {
 			headers: {
-				Authorization: `Bearer ${token}`,
+				Authorization: `Bearer ${process.env.ACCESS_TOKEN}`,
 				'content-type': `application/json`,
 				'x-sbks-token': `oauth`,
 				'x-sbks-data-endpoint': `POST ${path}`,

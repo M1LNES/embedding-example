@@ -1,9 +1,9 @@
 import React from 'react'
+import PageTemplate from './page-template'
 
 const MainPage = () => {
 	return (
-		<div>
-			<h1>Welcome to DEMO Embedding Web Application</h1>
+		<PageTemplate title='Welcome to DEMO Embedding Web Application'>
 			<p>
 				If you wanna see charts from Unified Analytics, redirect to URL "/ua".
 			</p>
@@ -11,7 +11,8 @@ const MainPage = () => {
 				If you wanna see charts created by Milan Janoch, redirect to URL
 				"/random".
 			</p>
-		</div>
+			<p>If you wanna see test page, redirect to URL "/test".</p>
+		</PageTemplate>
 	)
 }
 

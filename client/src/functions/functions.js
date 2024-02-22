@@ -1,23 +1,23 @@
 import { prejson } from './../../../assets/embedding'
 const PreJSONType = prejson.PreJSONType
 
-export async function fetchDataAllRequests(requestsExpanded) {
-	const fetchedData = Array.isArray(requestsExpanded)
-		? await Promise.all(
-				requestsExpanded.map(async (request) => {
-					return await fetchDataFromRequest(request.path, request.payload)
-				})
-		  )
-		: await fetchDataFromRequest(
-				requestsExpanded.path,
-				requestsExpanded.payload
-		  )
-	if (fetchedData === null) {
-		return null
-	}
+// export async function fetchDataAllRequests(requestsExpanded) {
+// 	const fetchedData = Array.isArray(requestsExpanded)
+// 		? await Promise.all(
+// 				requestsExpanded.map(async (request) => {
+// 					return await fetchDataFromRequest(request.path, request.payload)
+// 				})
+// 		  )
+// 		: await fetchDataFromRequest(
+// 				requestsExpanded.path,
+// 				requestsExpanded.payload
+// 		  )
+// 	if (fetchedData === null) {
+// 		return null
+// 	}
 
-	return fetchedData
-}
+// 	return fetchedData
+// }
 
 // async function fetchDataFromRequest(path, payload) {
 // 	try {

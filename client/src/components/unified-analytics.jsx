@@ -47,156 +47,180 @@ const UnifiedAnalytics = () => {
 				<Widget
 					boardID={2197}
 					widgetID={35914}
-					style={
-						'{"backgroundColor": "#f0f0f0", "border": "1px solid #ccc", "borderRadius": "5px", "padding": "20px", "boxShadow": "0 2px 4px rgba(0, 0, 0, 0.1)", "marginBottom": "20px"}'
-					}
-					params={`[
+					style={{
+						backgroundColor: '#f0f0f0',
+						border: '1px solid #ccc',
+						borderRadius: '5px',
+						padding: '20px',
+						boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
+						marginBottom: '20px',
+					}}
+					params={[
+						{
+							value: selectBoxValue,
+							name: 'daterange',
+							type: 'daterange',
+						},
+						{
+							value: '172196',
+							name: 'acl_account_id',
+							type: 'string',
+						},
+						{
+							value: '213866',
+							name: 'user_acl_id',
+							type: 'string',
+						},
+						{
+							value: [
 								{
-									"value": "${selectBoxValue}",
-									"name": "daterange",
-									"type": "daterange"
+									value: '164929129743',
+									title: 'Emplifi',
+									picture:
+										'https://scontent-sea1-1.xx.fbcdn.net/v/t39.30808-1/355016801_661576652675049_7066463062716805627_n.png?stp=dst-png_p200x200&_nc_cat=100&ccb=1-7&_nc_sid=4da83f&_nc_ohc=EChojOEb2rIAX-kZ1fl&_nc_ht=scontent-sea1-1.xx&edm=AJdBtusEAAAA&oh=00_AfClcKsCoiwHD1VU-0AQKK8MAS8j9QHSpoyoO539sAYNpQ&oe=65D799A6',
+									link: 'https://www.facebook.com/Emplifi',
+									network: 'facebook',
+									screenName: 'Emplifi',
 								},
-								{
-									"value": "172196",
-									"name": "acl_account_id",
-									"type": "string"
-								},
-								{
-									"value": "213866",
-									"name": "user_acl_id",
-									"type": "string"
-								},
-								{
-									"value": [
-									{
-										"value": "164929129743",
-										"title": "Emplifi",
-										"picture": "https://scontent-sea1-1.xx.fbcdn.net/v/t39.30808-1/355016801_661576652675049_7066463062716805627_n.png?stp=dst-png_p200x200&_nc_cat=100&ccb=1-7&_nc_sid=4da83f&_nc_ohc=EChojOEb2rIAX-kZ1fl&_nc_ht=scontent-sea1-1.xx&edm=AJdBtusEAAAA&oh=00_AfClcKsCoiwHD1VU-0AQKK8MAS8j9QHSpoyoO539sAYNpQ&oe=65D799A6",
-										"link": "https://www.facebook.com/Emplifi",
-										"network": "facebook",
-										"screenName": "Emplifi"
-									}
-									],
-									"name": "fbProfiles",
-									"type": "array"
-								}
-								]`}
+							],
+							name: 'fbProfiles',
+							type: 'array',
+						},
+					]}
 				/>
 				<Widget
 					boardID={2197}
 					widgetID={35924}
 					height={800}
-					style={
-						'{"backgroundColor": "#f0f0f0", "border": "1px solid #ccc", "borderRadius": "5px", "padding": "20px", "boxShadow": "0 2px 4px rgba(0, 0, 0, 0.1)", "marginBottom": "20px"}'
-					}
-					params={`[
+					style={{
+						backgroundColor: '#f0f0f0',
+						border: '1px solid #ccc',
+						borderRadius: '5px',
+						padding: '20px',
+						boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
+						marginBottom: '20px',
+					}}
+					params={[
+						{
+							value: selectBoxValue,
+							name: 'daterange',
+							type: 'daterange',
+						},
+						{
+							value: '172196',
+							name: 'acl_account_id',
+							type: 'string',
+						},
+						{
+							value: '213866',
+							name: 'user_acl_id',
+							type: 'string',
+						},
+						{
+							value: [
 								{
-									"value": "${selectBoxValue}",
-									"name": "daterange",
-									"type": "daterange"
+									value: '164929129743',
+									title: 'Emplifi',
+									picture:
+										'https://scontent-sea1-1.xx.fbcdn.net/v/t39.30808-1/355016801_661576652675049_7066463062716805627_n.png?stp=dst-png_p200x200&_nc_cat=100&ccb=1-7&_nc_sid=4da83f&_nc_ohc=EChojOEb2rIAX-kZ1fl&_nc_ht=scontent-sea1-1.xx&edm=AJdBtusEAAAA&oh=00_AfClcKsCoiwHD1VU-0AQKK8MAS8j9QHSpoyoO539sAYNpQ&oe=65D799A6',
+									link: 'https://www.facebook.com/Emplifi',
+									network: 'facebook',
+									screenName: 'Emplifi',
 								},
-								{
-									"value": "172196",
-									"name": "acl_account_id",
-									"type": "string"
-								},
-								{
-									"value": "213866",
-									"name": "user_acl_id",
-									"type": "string"
-								},
-								{
-									"value": [
-									{
-										"value": "164929129743",
-										"title": "Emplifi",
-										"picture": "https://scontent-sea1-1.xx.fbcdn.net/v/t39.30808-1/355016801_661576652675049_7066463062716805627_n.png?stp=dst-png_p200x200&_nc_cat=100&ccb=1-7&_nc_sid=4da83f&_nc_ohc=EChojOEb2rIAX-kZ1fl&_nc_ht=scontent-sea1-1.xx&edm=AJdBtusEAAAA&oh=00_AfClcKsCoiwHD1VU-0AQKK8MAS8j9QHSpoyoO539sAYNpQ&oe=65D799A6",
-										"link": "https://www.facebook.com/Emplifi",
-										"network": "facebook",
-										"screenName": "Emplifi"
-									}
-									],
-									"name": "fbProfiles",
-									"type": "array"
-								}
-								]`}
+							],
+							name: 'fbProfiles',
+							type: 'array',
+						},
+					]}
 				/>
 				<Widget
 					boardID={2197}
 					widgetID={35916}
 					height={900}
-					style={
-						'{"backgroundColor": "#f0f0f0", "border": "1px solid #ccc", "borderRadius": "5px", "padding": "20px", "boxShadow": "0 2px 4px rgba(0, 0, 0, 0.1)", "marginBottom": "20px"}'
-					}
-					params={`[
+					style={{
+						backgroundColor: '#f0f0f0',
+						border: '1px solid #ccc',
+						borderRadius: '5px',
+						padding: '20px',
+						boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
+						marginBottom: '20px',
+					}}
+					params={[
+						{
+							value: selectBoxValue,
+							name: 'daterange',
+							type: 'daterange',
+						},
+						{
+							value: '172196',
+							name: 'acl_account_id',
+							type: 'string',
+						},
+						{
+							value: '213866',
+							name: 'user_acl_id',
+							type: 'string',
+						},
+						{
+							value: [
 								{
-									"value": "${selectBoxValue}",
-									"name": "daterange",
-									"type": "daterange"
+									value: '164929129743',
+									title: 'Emplifi',
+									picture:
+										'https://scontent-sea1-1.xx.fbcdn.net/v/t39.30808-1/355016801_661576652675049_7066463062716805627_n.png?stp=dst-png_p200x200&_nc_cat=100&ccb=1-7&_nc_sid=4da83f&_nc_ohc=EChojOEb2rIAX-kZ1fl&_nc_ht=scontent-sea1-1.xx&edm=AJdBtusEAAAA&oh=00_AfClcKsCoiwHD1VU-0AQKK8MAS8j9QHSpoyoO539sAYNpQ&oe=65D799A6',
+									link: 'https://www.facebook.com/Emplifi',
+									network: 'facebook',
+									screenName: 'Emplifi',
 								},
-								{
-									"value": "172196",
-									"name": "acl_account_id",
-									"type": "string"
-								},
-								{
-									"value": "213866",
-									"name": "user_acl_id",
-									"type": "string"
-								},
-								{
-									"value": [
-									{
-										"value": "164929129743",
-										"title": "Emplifi",
-										"picture": "https://scontent-sea1-1.xx.fbcdn.net/v/t39.30808-1/355016801_661576652675049_7066463062716805627_n.png?stp=dst-png_p200x200&_nc_cat=100&ccb=1-7&_nc_sid=4da83f&_nc_ohc=EChojOEb2rIAX-kZ1fl&_nc_ht=scontent-sea1-1.xx&edm=AJdBtusEAAAA&oh=00_AfClcKsCoiwHD1VU-0AQKK8MAS8j9QHSpoyoO539sAYNpQ&oe=65D799A6",
-										"link": "https://www.facebook.com/Emplifi",
-										"network": "facebook",
-										"screenName": "Emplifi"
-									}
-									],
-									"name": "fbProfiles",
-									"type": "array"
-								}
-								]`}
+							],
+							name: 'fbProfiles',
+							type: 'array',
+						},
+					]}
 				/>
 				<Widget
 					boardID={2197}
 					widgetID={35912}
-					style={
-						'{"backgroundColor": "#f0f0f0", "border": "1px solid #ccc", "borderRadius": "5px", "padding": "20px", "boxShadow": "0 2px 4px rgba(0, 0, 0, 0.1)", "marginBottom": "20px"}'
-					}
-					params={`[
+					style={{
+						backgroundColor: '#f0f0f0',
+						border: '1px solid #ccc',
+						borderRadius: '5px',
+						padding: '20px',
+						boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
+						marginBottom: '20px',
+					}}
+					params={[
+						{
+							value: selectBoxValue,
+							name: 'daterange',
+							type: 'daterange',
+						},
+						{
+							value: '172196',
+							name: 'acl_account_id',
+							type: 'string',
+						},
+						{
+							value: '213866',
+							name: 'user_acl_id',
+							type: 'string',
+						},
+						{
+							value: [
 								{
-									"value": "${selectBoxValue}",
-									"name": "daterange",
-									"type": "daterange"
+									value: '164929129743',
+									title: 'Emplifi',
+									picture:
+										'https://scontent-sea1-1.xx.fbcdn.net/v/t39.30808-1/355016801_661576652675049_7066463062716805627_n.png?stp=dst-png_p200x200&_nc_cat=100&ccb=1-7&_nc_sid=4da83f&_nc_ohc=EChojOEb2rIAX-kZ1fl&_nc_ht=scontent-sea1-1.xx&edm=AJdBtusEAAAA&oh=00_AfClcKsCoiwHD1VU-0AQKK8MAS8j9QHSpoyoO539sAYNpQ&oe=65D799A6',
+									link: 'https://www.facebook.com/Emplifi',
+									network: 'facebook',
+									screenName: 'Emplifi',
 								},
-								{
-									"value": "172196",
-									"name": "acl_account_id",
-									"type": "string"
-								},
-								{
-									"value": "213866",
-									"name": "user_acl_id",
-									"type": "string"
-								},
-								{
-									"value": [
-									{
-										"value": "164929129743",
-										"title": "Emplifi",
-										"picture": "https://scontent-sea1-1.xx.fbcdn.net/v/t39.30808-1/355016801_661576652675049_7066463062716805627_n.png?stp=dst-png_p200x200&_nc_cat=100&ccb=1-7&_nc_sid=4da83f&_nc_ohc=EChojOEb2rIAX-kZ1fl&_nc_ht=scontent-sea1-1.xx&edm=AJdBtusEAAAA&oh=00_AfClcKsCoiwHD1VU-0AQKK8MAS8j9QHSpoyoO539sAYNpQ&oe=65D799A6",
-										"link": "https://www.facebook.com/Emplifi",
-										"network": "facebook",
-										"screenName": "Emplifi"
-									}
-									],
-									"name": "fbProfiles",
-									"type": "array"
-								}
-								]`}
+							],
+							name: 'fbProfiles',
+							type: 'array',
+						},
+					]}
 				/>
 			</main>
 

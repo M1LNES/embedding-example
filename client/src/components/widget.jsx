@@ -1,46 +1,39 @@
 import React, { useMemo } from 'react'
-// import { PreJSONContext, PreJSONType } from '@sbks/prejson'
-// import {
-// 	fetchWidgetData,
-// fetchDataAllRequests,
-// fetchBoardFields,
-// } from '../scripts/widget-config'
-import WidgetVision from './widget-vision'
-import { useQuery } from '@tanstack/react-query'
-import { Box } from '@mui/material'
-import {
-	BOARD_WIDGET_FIELD_TYPE_TO_PREJSON_TYPE,
-	parseJSON,
-} from '../functions/functions'
-import { previousSuite } from '../functions/prejson-suite'
-import { PreJSONContext, PreJSONType } from '../app'
+import { prejson } from '../../../assets/embedding'
 import {
 	fetchWidgetData,
 	fetchDataAllRequests,
 	fetchBoardFields,
 } from '../functions/widget-config'
+import WidgetVision from './widget-vision'
+import { useQuery } from '@tanstack/react-query'
+import { number, string, object, array } from 'prop-types'
+import { Box, CircularProgress } from '@mui/material'
+import { previousSuite } from '../functions/prejson-suite'
+import { BOARD_WIDGET_FIELD_TYPE_TO_PREJSON_TYPE } from '../functions/functions'
+const PreJSONType = prejson.PreJSONType
+const PreJSONContext = prejson.PreJSONContext
 
 const Widget = (props) => {
 	const { boardID, widgetID, params, className, style, width, height } = props
+	console.log(boardID, widgetID, params, className, style, width, height)
 	const parsedParams = useMemo(() => {
-		const parsedData = parseJSON(params)
-		if (!Array.isArray(parsedData) || Object.keys(parsedData).length === 0) {
+		if (!Array.isArray(params) || Object.keys(params).length === 0) {
 			return {}
 		}
 
 		const result = Object.fromEntries(
-			parsedData.map(({ value, name }) => [name, value])
+			params.map(({ value, name }) => [name, value])
 		)
 
 		return result
 	}, [params])
 
-	const parsedStyle = parseJSON(style)
-
 	const { data: fieldsToDeclare, isLoading: areFieldsLoading } = useQuery({
 		queryKey: ['fieldsToDeclare', boardID],
 		queryFn: async () => await fetchBoardFields(boardID),
 	})
+
 	const context = useMemo(() => {
 		const preJsonContext = new PreJSONContext({
 			debug: true,
@@ -63,19 +56,27 @@ const Widget = (props) => {
 		queryKey: ['widget', boardID, widgetID],
 		queryFn: async () => await fetchWidgetData(boardID, widgetID),
 	})
+
 	const requestsNotExpanded = useMemo(() => {
-		if (!isWidgetDataLoading && widgetData.requests) {
+		if (!isWidgetDataLoading && widgetData && widgetData.requests) {
 			return context.parse(widgetData.requests)
 		}
 	}, [widgetData, context, isWidgetDataLoading])
+
 	const { expandedRequests, errorExpandedConfig } = useMemo(() => {
+		if (widgetData === null) {
+			return {
+				expandedRequests: null,
+				errorExpandedConfig: 'OMNI_STUDIO_FETCHING_WIDGET_ERROR',
+			}
+		}
 		if (widgetData === 'Not found') {
 			return {
 				expandedRequests: null,
 				errorExpandedConfig: `Widget ${widgetID} not found on board ${boardID}!`,
 			}
 		}
-		if (!isWidgetDataLoading && widgetData.requests) {
+		if (!isWidgetDataLoading && widgetData && widgetData.requests) {
 			if (!requestsNotExpanded.isValid) {
 				return {
 					expandedRequests: null,
@@ -101,7 +102,6 @@ const Widget = (props) => {
 						'Error - you must specify all PreJSON params that widget is depended on!',
 				}
 			}
-
 			try {
 				return {
 					expandedRequests: requestsNotExpanded.expand(parsedParams).toJSON(),
@@ -129,8 +129,15 @@ const Widget = (props) => {
 		queryFn: async () => await fetchDataAllRequests(expandedRequests),
 		enabled: !!widgetData && !!widgetData.requests && !!expandedRequests,
 	})
+
 	const { prejson, errorVisionConfig } = useMemo(() => {
-		if (!isWidgetDataLoading && !isLoading && widgetData !== 'Not found') {
+		if (
+			!isWidgetDataLoading &&
+			!isLoading &&
+			widgetData &&
+			widgetData !== 'Not found' &&
+			data
+		) {
 			context.setParameterValue('data', data)
 			if (!context.parse(widgetData.config).isValid) {
 				return { prejson: null, errorVisionConfig: 'PreJSON is not valid' }
@@ -147,19 +154,44 @@ const Widget = (props) => {
 				errorVisionConfig: null,
 			}
 		}
-		return { prejson: null, errorVisionConfig: 'Data not loaded' }
+		return {
+			prejson: null,
+			errorVisionConfig: 'PUBLIC_API_DATA_FETCHING_ERROR',
+		}
 	}, [widgetData, parsedParams, data, context, isLoading, isWidgetDataLoading])
 	if (isWidgetDataLoading || isLoading) {
-		return <h2>Fetching data...</h2>
+		return (
+			<Box
+				height={height || '100%'}
+				width={width}
+				style={style}
+				justifyContent='center'
+				display='flex'
+				alignItems='center'
+			>
+				<CircularProgress />
+			</Box>
+		)
 	} else if (errorVisionConfig !== null || errorExpandedConfig !== null) {
-		return <h1>{errorExpandedConfig || errorVisionConfig}</h1>
+		return (
+			<Box
+				height={height || '100%'}
+				width={width}
+				style={style}
+				justifyContent='center'
+				display='flex'
+				alignItems='center'
+			>
+				<h1>{errorExpandedConfig || errorVisionConfig}</h1>
+			</Box>
+		)
 	} else {
 		return (
 			<Box
-				height={height}
+				height={height || '100%'}
 				width={width}
 				className={className}
-				style={parsedStyle}
+				style={style}
 				display='flex'
 				flexDirection='column'
 				overflow='clip'
@@ -183,6 +215,16 @@ const Widget = (props) => {
 			</Box>
 		)
 	}
+}
+
+Widget.propTypes = {
+	boardID: number.isRequired,
+	widgetID: number.isRequired,
+	params: array,
+	height: number,
+	width: number,
+	className: string,
+	style: object,
 }
 
 export default Widget

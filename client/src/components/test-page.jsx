@@ -45,39 +45,40 @@ const TestPage = () => {
 					<Widget
 						boardID={2197}
 						widgetID={35916}
-						width={800}
-						height={800}
-						params={`[
-								{
-									"value": "P30D/now[sD]",
-									"name": "daterange",
-									"type": "daterange"
-								},
-								{
-									"value": "172196",
-									"name": "acl_account_id",
-									"type": "string"
-								},
-								{
-									"value": "213866",
-									"name": "user_acl_id",
-									"type": "string"
-								},
-								{
-									"value": [
+						width={770}
+						height={770}
+						params={[
+							{
+								value: 'P30D/now[sD]',
+								name: 'daterange',
+								type: 'daterange',
+							},
+							{
+								value: '172196',
+								name: 'acl_account_id',
+								type: 'string',
+							},
+							{
+								value: '213866',
+								name: 'user_acl_id',
+								type: 'string',
+							},
+							{
+								value: [
 									{
-										"value": "164929129743",
-										"title": "Emplifi",
-										"picture": "https://scontent-sea1-1.xx.fbcdn.net/v/t39.30808-1/355016801_661576652675049_7066463062716805627_n.png?stp=dst-png_p200x200&_nc_cat=100&ccb=1-7&_nc_sid=4da83f&_nc_ohc=EChojOEb2rIAX-kZ1fl&_nc_ht=scontent-sea1-1.xx&edm=AJdBtusEAAAA&oh=00_AfClcKsCoiwHD1VU-0AQKK8MAS8j9QHSpoyoO539sAYNpQ&oe=65D799A6",
-										"link": "https://www.facebook.com/Emplifi",
-										"network": "facebook",
-										"screenName": "Emplifi"
-									}
-									],
-									"name": "fbProfiles",
-									"type": "array"
-								}
-								]`}
+										value: '164929129743',
+										title: 'Emplifi',
+										picture:
+											'https://scontent-sea1-1.xx.fbcdn.net/v/t39.30808-1/355016801_661576652675049_7066463062716805627_n.png?stp=dst-png_p200x200&_nc_cat=100&ccb=1-7&_nc_sid=4da83f&_nc_ohc=EChojOEb2rIAX-kZ1fl&_nc_ht=scontent-sea1-1.xx&edm=AJdBtusEAAAA&oh=00_AfClcKsCoiwHD1VU-0AQKK8MAS8j9QHSpoyoO539sAYNpQ&oe=65D799A6',
+										link: 'https://www.facebook.com/Emplifi',
+										network: 'facebook',
+										screenName: 'Emplifi',
+									},
+								],
+								name: 'fbProfiles',
+								type: 'array',
+							},
+						]}
 					/>
 				</section>
 			</main>

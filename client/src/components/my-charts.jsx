@@ -76,76 +76,76 @@ const MyCharts = () => {
 			<Widget
 				boardID={1684}
 				widgetID={25633}
-				params={`[
-				{
-					"value": "${selectBoxValue}",
-					"name": "cas",
-					"type": "daterange"
-				}
-				]`}
+				params={[
+					{
+						value: selectBoxValue,
+						name: 'cas',
+						type: 'daterange',
+					},
+				]}
 				height={300}
 			/>
 			<div style={{ display: 'flex', flexDirection: 'row', gap: '10px' }}>
 				<Widget
 					boardID={1684}
 					widgetID={25620}
-					params={`[
-          {
-			"value": "${selectBoxValue}",
-            "name": "cas",
-            "type": "daterange"
-          }
-        ]`}
-					style={'{"borderStyle": "solid"}'}
+					params={[
+						{
+							value: selectBoxValue,
+							name: 'cas',
+							type: 'daterange',
+						},
+					]}
+					style={{ borderStyle: 'solid' }}
 				/>
 				<Widget
 					boardID={1684}
 					widgetID={25621}
-					params={`[
-          {
-			"value": "${selectBoxValue}",
-            "name": "cas",
-            "type": "daterange"
-          }
-        ]`}
-					style={'{"borderStyle": "solid"}'}
+					params={[
+						{
+							value: selectBoxValue,
+							name: 'cas',
+							type: 'daterange',
+						},
+					]}
+					style={{ borderStyle: 'solid' }}
 				/>
 				<Widget
 					boardID={1684}
 					widgetID={25630}
-					params={`[
-          {
-			"value": "${selectBoxValue}",
-            "name": "cas",
-            "type": "daterange"
-          }
-        ]`}
-					style={'{"borderStyle": "solid"}'}
+					params={[
+						{
+							value: selectBoxValue,
+							name: 'cas',
+							type: 'daterange',
+						},
+					]}
+					style={{ borderStyle: 'solid' }}
 				/>
 				<Widget
 					boardID={1684}
 					widgetID={25623}
-					params={`[
-          {
-			"value": "${selectBoxValue}",
-            "name": "cas",
-            "type": "daterange"
-          }
-        ]`}
-					style={'{"borderStyle": "solid"}'}
+					params={[
+						{
+							value: selectBoxValue,
+							name: 'cas',
+							type: 'daterange',
+						},
+					]}
+					style={{ borderStyle: 'solid' }}
 				/>
 			</div>
 			<div style={{ display: 'flex', flexDirection: 'row', gap: '10px' }}>
 				<Widget
 					boardID={1684}
 					widgetID={25749}
-					params={`[
-      {
-		"value": "${selectBoxValue}",
-        "name": "cas",
-        "type": "daterange"
-      }
-    ]`}
+					params={[
+						{
+							value: selectBoxValue,
+							name: 'cas',
+							type: 'daterange',
+						},
+					]}
 					height={150}
 					width={800}
 					style={{ flex: '0 0 800px' }}

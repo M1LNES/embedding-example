@@ -1,6 +1,9 @@
 import board1684 from '../schemas/board-schemas/board1684'
 import board2197 from '../schemas/board-schemas/board2197'
+import board795 from '../schemas/board-schemas/board795'
+
 const boards = {
+	795: board795,
 	1684: board1684,
 	2197: board2197,
 }

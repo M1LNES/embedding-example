@@ -2,7 +2,7 @@ import React from 'react'
 import WidgetConfig from './widget-config'
 import WidgetConfigRevealed from './widget-config-revealed'
 import { object, bool, array, oneOfType } from 'prop-types'
-import { Box, Divider, Tooltip } from '@mui/material'
+import { Box, Divider, Stack, Tooltip } from '@mui/material'
 import QuestionMarkIcon from '@mui/icons-material/QuestionMark'
 import { vision } from '../../../assets/embedding'
 const Vision = vision.Vision
@@ -22,11 +22,9 @@ const WidgetVision = (props) => {
 	return (
 		<VisionContextProvider>
 			<Box>
-				<Box display='flex' alignItems='center'>
+				<Stack direction='row' alignItems='center' spacing={1}>
 					{prejson.header.title && (
-						<Box marginRight={1}>
-							<h3 style={{ fontSize: 'medium' }}>{prejson.header.title}</h3>
-						</Box>
+						<h3 style={{ fontSize: 'medium' }}>{prejson.header.title}</h3>
 					)}
 					{prejson.header.tooltip && (
 						<Tooltip title={prejson.header.tooltip}>
@@ -35,7 +33,7 @@ const WidgetVision = (props) => {
 							</div>
 						</Tooltip>
 					)}
-				</Box>
+				</Stack>
 
 				{prejson.header.subtitle && (
 					<Box fontSize='small'>{prejson.header.subtitle}</Box>
@@ -43,24 +41,20 @@ const WidgetVision = (props) => {
 			</Box>
 			<Divider textAlign='right'>
 				<Box>
-					{prejson.header.badges && (
-						<>
-							{prejson.header.badges.map((badge, index) => (
-								<Tooltip title={badge.tooltip} key={index} marginRight={1}>
-									<Box
-										display='inline-block'
-										padding='5px'
-										borderRadius='20px'
-										border='1px solid #ccc'
-										backgroundColor='#f0f0f0'
-										fontSize='small'
-									>
-										{badge.title}
-									</Box>
-								</Tooltip>
-							))}
-						</>
-					)}
+					{prejson.header.badges?.map((badge, index) => (
+						<Tooltip title={badge.tooltip} key={index} marginRight={1}>
+							<Box
+								display='inline-block'
+								padding='5px'
+								borderRadius='20px'
+								border='1px solid #ccc'
+								backgroundColor='#f0f0f0'
+								fontSize='small'
+							>
+								{badge.title}
+							</Box>
+						</Tooltip>
+					))}
 				</Box>
 			</Divider>
 

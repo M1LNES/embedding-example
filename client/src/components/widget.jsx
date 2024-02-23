@@ -16,9 +16,8 @@ const PreJSONContext = prejson.PreJSONContext
 
 const Widget = (props) => {
 	const { boardID, widgetID, params, className, style, width, height } = props
-	console.log(boardID, widgetID, params, className, style, width, height)
 	const parsedParams = useMemo(() => {
-		if (!Array.isArray(params) || Object.keys(params).length === 0) {
+		if (!Array.isArray(params)) {
 			return {}
 		}
 
@@ -58,11 +57,10 @@ const Widget = (props) => {
 	})
 
 	const requestsNotExpanded = useMemo(() => {
-		if (!isWidgetDataLoading && widgetData && widgetData.requests) {
+		if (!isWidgetDataLoading && widgetData?.requests) {
 			return context.parse(widgetData.requests)
 		}
 	}, [widgetData, context, isWidgetDataLoading])
-
 	const { expandedRequests, errorExpandedConfig } = useMemo(() => {
 		if (widgetData === null) {
 			return {
@@ -102,6 +100,7 @@ const Widget = (props) => {
 						'Error - you must specify all PreJSON params that widget is depended on!',
 				}
 			}
+
 			try {
 				return {
 					expandedRequests: requestsNotExpanded.expand(parsedParams).toJSON(),
@@ -154,9 +153,10 @@ const Widget = (props) => {
 				errorVisionConfig: null,
 			}
 		}
+
 		return {
 			prejson: null,
-			errorVisionConfig: 'PUBLIC_API_DATA_FETCHING_ERROR',
+			errorVisionConfig: 'chyba',
 		}
 	}, [widgetData, parsedParams, data, context, isLoading, isWidgetDataLoading])
 	if (isWidgetDataLoading || isLoading) {

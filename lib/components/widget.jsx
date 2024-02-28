@@ -133,7 +133,7 @@ const Widget = (props) => {
 		enabled: !!widgetData && !!widgetData.requests && !!expandedRequests,
 	})
 
-	console.log(data)
+	// console.log(data)
 
 	const { prejson, errorVisionConfig } = useMemo(() => {
 		if (

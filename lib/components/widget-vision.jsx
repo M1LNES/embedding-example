@@ -2,9 +2,10 @@ import React from 'react'
 import WidgetConfig from './widget-config'
 import WidgetConfigRevealed from './widget-config-revealed'
 import { object, bool, array, oneOfType } from 'prop-types'
-import { Box, Divider, Stack, Tooltip } from '@mui/material'
-import QuestionMarkIcon from '@mui/icons-material/QuestionMark'
-import { vision } from '../../../assets/embedding'
+import { Box, Stack, Tooltip } from '@mui/material'
+import { vision } from '../../assets/embedding'
+import HelpOutlineIcon from '@mui/icons-material/HelpOutline'
+
 const Vision = vision.Vision
 const VisionContextProvider = vision.VisionContextProvider
 
@@ -21,50 +22,73 @@ const WidgetVision = (props) => {
 
 	return (
 		<VisionContextProvider>
-			<Box>
-				<Stack direction='row' alignItems='center' spacing={1}>
-					{prejson.header.title && (
-						<h3 style={{ fontSize: 'medium' }}>{prejson.header.title}</h3>
-					)}
-					{prejson.header.tooltip && (
-						<Tooltip title={prejson.header.tooltip}>
-							<div>
-								<QuestionMarkIcon fontSize='small' />
-							</div>
-						</Tooltip>
-					)}
-				</Stack>
-
-				{prejson.header.subtitle && (
-					<Box fontSize='small'>{prejson.header.subtitle}</Box>
+			<Stack
+				direction='row'
+				alignItems='center'
+				spacing={1}
+				marginTop={0.5}
+				marginLeft={1}
+			>
+				{prejson.header.title && (
+					<Box
+						variant='h3'
+						fontWeight='bold'
+						fontFamily='sans-serif'
+						fontSize='large'
+					>
+						{prejson.header.title}
+					</Box>
 				)}
-			</Box>
-			<Divider textAlign='right'>
-				<Box>
+				{prejson.header.tooltip && (
+					<Tooltip title={prejson.header.tooltip}>
+						<div>
+							<HelpOutlineIcon fontSize='small' />
+						</div>
+					</Tooltip>
+				)}
+			</Stack>
+			<Stack
+				direction='row'
+				alignItems='center'
+				justifyContent='space-between'
+				marginTop={0.5}
+				marginLeft={1}
+			>
+				{prejson.header.subtitle && (
+					<Box
+						variant='subtitle1'
+						color='textSecondary'
+						fontFamily='sans-serif'
+						fontSize='small'
+					>
+						{prejson.header.subtitle}
+					</Box>
+				)}
+				<Stack direction='row' alignItems='center'>
 					{prejson.header.badges?.map((badge, index) => (
-						<Tooltip title={badge.tooltip} key={index} marginRight={1}>
-							<Box
-								display='inline-block'
-								padding='5px'
-								borderRadius='20px'
-								border='1px solid #ccc'
-								backgroundColor='#f0f0f0'
-								fontSize='small'
-							>
+						<Tooltip
+							title={badge.tooltip}
+							key={index}
+							marginRight={1}
+							padding='1px 8px 1px'
+						>
+							<Box borderRadius='10px' border='1px solid #ccc' fontSize='small'>
 								{badge.title}
 							</Box>
 						</Tooltip>
 					))}
-				</Box>
-			</Divider>
+				</Stack>
+			</Stack>
 
 			<Vision spec={prejson.vision} input={data} />
 			<Box
-				alignItems='center'
+				align='center'
 				display='flex'
 				padding={1}
 				color='#000'
+				fontFamily='sans-serif'
 				justifyContent='center'
+				fontSize='small'
 			>
 				© Data by Emplifi
 			</Box>

@@ -1,5 +1,5 @@
-/* eslint-disable react/no-unescaped-entities */
 import React, { useState } from 'react'
+import Widget from '../../../../lib/components/widget'
 import Template from './template'
 import {
 	Box,
@@ -10,14 +10,10 @@ import {
 	MenuItem,
 	Select,
 	Stack,
-	Typography,
 } from '@mui/material'
-import Widget from './widget'
-import {
-	charListeningParams,
-	chart1Params,
-} from '../schemas/board-schemas/board-params'
-const MainPage = () => {
+import { charListeningParams, chart1Params } from '../board-params'
+
+const Emplifi = () => {
 	const [selectBoxValue, setSelectBoxValue] = useState('P30D/now[sD]')
 
 	const handleChange = (e) => {
@@ -540,4 +536,4 @@ const MainPage = () => {
 	)
 }
 
-export default MainPage
+export default Emplifi

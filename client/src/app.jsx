@@ -1,18 +1,16 @@
 import React from 'react'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import MainPage from './components/main-page'
-import MyCharts from './components/my-charts'
-import UnifiedAnalytics from './components/unified-analytics'
-import { prejson, vision, prejsonTime } from '../../assets/embedding'
-import TestPage from './components/test-page'
+import MainPage from './components/main-page/main-page'
+import { prejson, vision } from '../../assets/embedding'
+import Emplifi from './components/emplifi/emplifi'
+import TourDeFrance from './components/tour-de-france/tour-de-france'
 export const Vision = vision.Vision
 export const VisionContextProvider = vision.VisionContextProvider
 export const PreJSON = prejson.PreJSON
 export const PreJSONType = prejson.PreJSONType
 export const getModifierSpecification = prejson.getModifierSpecification
 export const PreJSONContext = prejson.PreJSONContext
-console.log(prejson, vision, prejsonTime)
 
 const queryClient = new QueryClient()
 
@@ -21,9 +19,8 @@ const App = () => {
 		<BrowserRouter>
 			<QueryClientProvider client={queryClient}>
 				<Routes>
-					<Route path='/ua' element={<UnifiedAnalytics />} />
-					<Route path='/random' element={<MyCharts />} />
-					<Route path='/test' element={<TestPage />} />
+					<Route path='/emplifi' element={<Emplifi />} />
+					<Route path='/tourdefrance' element={<TourDeFrance />} />
 					<Route path='/' element={<MainPage />} />
 				</Routes>
 			</QueryClientProvider>

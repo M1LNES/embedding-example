@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { Box } from '@mui/material'
 import React from 'react'
-import picture from './images/Wallpaper_3.png'
+import picture from '../images/Wallpaper_3.png'
 import GitHubIcon from '@mui/icons-material/GitHub'
 import XIcon from '@mui/icons-material/X'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'

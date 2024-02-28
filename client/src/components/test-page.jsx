@@ -2,7 +2,7 @@ import React from 'react'
 import GitHubIcon from '@mui/icons-material/GitHub'
 import XIcon from '@mui/icons-material/X'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
-import Widget from './widget'
+import Widget from '../../../lib/components/widget'
 
 const TestPage = () => {
 	return (

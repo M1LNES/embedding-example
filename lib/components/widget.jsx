@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react'
-import { prejson } from '../../../assets/embedding'
+import { prejson } from '../../assets/embedding'
 import {
 	fetchWidgetData,
 	fetchDataAllRequests,
@@ -10,7 +10,11 @@ import { useQuery } from '@tanstack/react-query'
 import { number, string, object, array } from 'prop-types'
 import { Box, CircularProgress } from '@mui/material'
 import { previousSuite } from '../functions/prejson-suite'
-import { BOARD_WIDGET_FIELD_TYPE_TO_PREJSON_TYPE } from '../functions/functions'
+import { BOARD_WIDGET_FIELD_TYPE_TO_PREJSON_TYPE } from '../constants/prejson-type'
+import {
+	OMNI_STUDIO_FETCHING_WIDGET_ERROR,
+	PUBLIC_API_DATA_FETCHING_ERROR,
+} from '../constants/api-messages'
 const PreJSONType = prejson.PreJSONType
 const PreJSONContext = prejson.PreJSONContext
 
@@ -65,7 +69,7 @@ const Widget = (props) => {
 		if (widgetData === null) {
 			return {
 				expandedRequests: null,
-				errorExpandedConfig: 'OMNI_STUDIO_FETCHING_WIDGET_ERROR',
+				errorExpandedConfig: OMNI_STUDIO_FETCHING_WIDGET_ERROR,
 			}
 		}
 		if (widgetData === 'Not found') {
@@ -129,6 +133,8 @@ const Widget = (props) => {
 		enabled: !!widgetData && !!widgetData.requests && !!expandedRequests,
 	})
 
+	console.log(data)
+
 	const { prejson, errorVisionConfig } = useMemo(() => {
 		if (
 			!isWidgetDataLoading &&
@@ -156,7 +162,7 @@ const Widget = (props) => {
 
 		return {
 			prejson: null,
-			errorVisionConfig: 'chyba',
+			errorVisionConfig: PUBLIC_API_DATA_FETCHING_ERROR,
 		}
 	}, [widgetData, parsedParams, data, context, isLoading, isWidgetDataLoading])
 	if (isWidgetDataLoading || isLoading) {

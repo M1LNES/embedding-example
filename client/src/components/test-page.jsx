@@ -80,6 +80,18 @@ const TestPage = () => {
 							},
 						]}
 					/>
+					<Widget
+						boardID={1684}
+						widgetID={25630}
+						params={[
+							{
+								value: 'P30D/now[sD]',
+								name: 'cas',
+								type: 'daterange',
+							},
+						]}
+						showConfig={true}
+					/>
 				</section>
 			</main>
 

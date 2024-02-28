@@ -9,7 +9,15 @@ import HelpOutlineIcon from '@mui/icons-material/HelpOutline'
 const Vision = vision.Vision
 const VisionContextProvider = vision.VisionContextProvider
 
-/** Component that visualises vision widget */
+/**
+ * @param {object, array} data Fetched data (array for multiple request, object for only one).
+ * @param {object} prejson Expanded vision config.
+ * @param {boolean} showConfig Not revealed config showed in visualization.
+ * @param {boolean} showConfigRevealed Revealed config showed in visualization.
+ * @param {object, array} dataRequests Not expanded data requests.
+ * @param {Array|Object} requestsExpanded - Expanded request(s) (if only one request - object, otherwise array).
+ * @returns {React.ReactElement} Vision component.
+ */
 const WidgetVision = (props) => {
 	const {
 		data,

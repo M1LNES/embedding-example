@@ -1,7 +1,13 @@
 import React from 'react'
-import { object } from 'prop-types'
+import { object, array, oneOfType } from 'prop-types'
 
-/** Component that shows info about widget */
+/**
+ *  Component used for showing NOT expanded data requests and widget configs.
+ *
+ * @param {object, array} dataRequests Not expanded data requests.
+ * @param {object} prejson Expanded vision config.
+ * @returns {React.ReactElement} Not revealed data requests component.
+ */
 const WidgetConfig = (props) => {
 	const { prejson, dataRequests } = props
 	return (
@@ -13,7 +19,7 @@ const WidgetConfig = (props) => {
 }
 
 WidgetConfig.propTypes = {
-	dataRequests: object,
+	dataRequests: oneOfType([object, array]),
 	prejson: object.isRequired,
 }
 export default WidgetConfig

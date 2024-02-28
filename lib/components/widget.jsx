@@ -18,6 +18,17 @@ import {
 const PreJSONType = prejson.PreJSONType
 const PreJSONContext = prejson.PreJSONContext
 
+/**
+ * @param {number} boardID Board ID.
+ * @param {number} widgetID Widget ID.
+ * @param {object} style JSON object of CSS <Box> styling.
+ * @param {string} className Name of the styling class.
+ * @param {array} params Array of preJSON objects for expanding.
+ * @param {number} width Width of component.
+ * @param {number} height Height of component.
+ *
+ * @returns {React.ReactElement} Widget component.
+ */
 const Widget = (props) => {
 	const { boardID, widgetID, params, className, style, width, height } = props
 	const parsedParams = useMemo(() => {
@@ -132,8 +143,6 @@ const Widget = (props) => {
 		queryFn: async () => await fetchDataAllRequests(expandedRequests),
 		enabled: !!widgetData && !!widgetData.requests && !!expandedRequests,
 	})
-
-	// console.log(data)
 
 	const { prejson, errorVisionConfig } = useMemo(() => {
 		if (

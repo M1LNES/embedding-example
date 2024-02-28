@@ -1,6 +1,13 @@
 import React from 'react'
-import { object } from 'prop-types'
+import { object, oneOfType, array } from 'prop-types'
 
+/**
+ *  Component used for showing expanded data requests and widget configs.
+ *
+ * @param {object, array} expandedDataRequests Expanded data requests.
+ * @param {object} prejson Expanded vision config.
+ * @returns {React.ReactElement} Revealed data requests component.
+ */
 const WidgetConfigRevealed = (props) => {
 	const { prejson, expandedDataRequests } = props
 
@@ -13,7 +20,7 @@ const WidgetConfigRevealed = (props) => {
 }
 
 WidgetConfigRevealed.propTypes = {
-	expandedDataRequests: object.isRequired,
+	expandedDataRequests: oneOfType([object, array]),
 	prejson: object.isRequired,
 }
 

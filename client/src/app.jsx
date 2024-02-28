@@ -5,6 +5,7 @@ import MainPage from './components/main-page/main-page'
 import { prejson, vision } from '../../assets/embedding'
 import Emplifi from './components/emplifi/emplifi'
 import TourDeFrance from './components/tour-de-france/tour-de-france'
+import TestPage from './components/test-page'
 export const Vision = vision.Vision
 export const VisionContextProvider = vision.VisionContextProvider
 export const PreJSON = prejson.PreJSON
@@ -21,6 +22,7 @@ const App = () => {
 				<Routes>
 					<Route path='/emplifi' element={<Emplifi />} />
 					<Route path='/tourdefrance' element={<TourDeFrance />} />
+					<Route path='/test' element={<TestPage />} />
 					<Route path='/' element={<MainPage />} />
 				</Routes>
 			</QueryClientProvider>

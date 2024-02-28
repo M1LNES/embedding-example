@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box, Divider, Grid } from '@mui/material'
 import Widget from '../../../../lib/components/widget'
-import { community_comands } from '../board-params'
+import { board_avg, community_comands } from '../board-params'
 import Template from './template'
 
 const TourDeFrance = () => {
@@ -272,7 +272,7 @@ const TourDeFrance = () => {
 							<Widget
 								boardID={2198}
 								widgetID={35930}
-								params={community_comands}
+								params={board_avg}
 								style={{
 									borderStyle: 'ridge',
 									borderRadius: '20px',

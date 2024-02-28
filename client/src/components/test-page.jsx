@@ -3,6 +3,8 @@ import GitHubIcon from '@mui/icons-material/GitHub'
 import XIcon from '@mui/icons-material/X'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import Widget from '../../../lib/components/widget'
+import { board_avg } from './board-params'
+// import { community_comands } from './board-params'
 
 const TestPage = () => {
 	return (
@@ -42,7 +44,7 @@ const TestPage = () => {
 				{/* Image/Chart */}
 				<section style={{ marginBottom: '20px' }}>
 					<h2>My Image/Chart</h2>
-					<Widget
+					{/* <Widget
 						boardID={2197}
 						widgetID={35916}
 						width={770}
@@ -79,19 +81,8 @@ const TestPage = () => {
 								type: 'array',
 							},
 						]}
-					/>
-					<Widget
-						boardID={1684}
-						widgetID={25630}
-						params={[
-							{
-								value: 'P30D/now[sD]',
-								name: 'cas',
-								type: 'daterange',
-							},
-						]}
-						showConfig={true}
-					/>
+					/> */}
+					<Widget boardID={2198} widgetID={35930} params={board_avg} />
 				</section>
 			</main>
 

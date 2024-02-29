@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import Widget from '../../../../lib/components/widget'
 import Template from './template'
 import {
 	Box,
@@ -12,6 +11,7 @@ import {
 	Stack,
 } from '@mui/material'
 import { charListeningParams, chart1Params } from '../board-params'
+import Widget from '../../../../lib/client/components/widget'
 
 const Emplifi = () => {
 	const [selectBoxValue, setSelectBoxValue] = useState('P30D/now[sD]')

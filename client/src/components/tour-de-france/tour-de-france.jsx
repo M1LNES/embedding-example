@@ -1,6 +1,6 @@
 import React from 'react'
 import { Box, Divider, Grid } from '@mui/material'
-import Widget from '../../../../lib/components/widget'
+import Widget from '../../../../lib/client/components/widget'
 import { board_avg, community_comands } from '../board-params'
 import Template from './template'
 

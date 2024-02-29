@@ -5,17 +5,18 @@
 	"main": "api/index.js",
 	"private": true,
 	"scripts": {
-		"dev": "node ./api/index.js ",
+		"dev": "node lib/server/index.js ",
 		"build": "NODE_ENV=production webpack --config ./webpack.config.js",
 		"start": "NODE_ENV=production node $NODE_DEFAULT_OPTIONS ./api/index.js",
 		"heroku-postbuild": "npm run build",
 		"postinstall": "./scripts/postinstall.sh",
-		"test": "mocha lib/test"
+		"test": "mocha"
 	},
 	"keywords": [],
 	"author": "",
 	"license": "ISC",
 	"dependencies": {
+		"@babel/register": "^7.23.7",
 		"@mui/icons-material": "^5.15.10",
 		"@mui/material": "^5.15.10",
 		"@tanstack/react-query": "^5.21.7",

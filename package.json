@@ -2,7 +2,7 @@
 	"name": "example_app",
 	"version": "1.0.0",
 	"description": "",
-	"main": "api/index.js",
+	"main": "lib/api/index.js",
 	"private": true,
 	"scripts": {
 		"dev": "node lib/api/index.js ",

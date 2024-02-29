@@ -5,7 +5,7 @@
 	"main": "api/index.js",
 	"private": true,
 	"scripts": {
-		"dev": "node lib/server/index.js ",
+		"dev": "node lib/api/index.js ",
 		"build": "NODE_ENV=production webpack --config ./webpack.config.js",
 		"start": "NODE_ENV=production node $NODE_DEFAULT_OPTIONS ./api/index.js",
 		"heroku-postbuild": "npm run build",

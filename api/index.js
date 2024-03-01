@@ -28,7 +28,7 @@ const start = () => {
 		)
 	} else {
 		const webpackDevMiddleware = require('webpack-dev-middleware')
-		const config = require('../../webpack.config.dev')
+		const config = require('../webpack.config.dev')
 		const compiler = require('webpack')(config)
 		wdMiddleware = webpackDevMiddleware(compiler)
 

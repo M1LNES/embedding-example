@@ -20,7 +20,6 @@
 		"@babel/register": "^7.23.7",
 		"@mui/icons-material": "^5.15.10",
 		"@mui/material": "^5.15.10",
-		"@sbks/vision": "^1.0.0-alpha.54",
 		"@tanstack/react-query": "^5.21.7",
 		"@testing-library/jest-dom": "^6.4.2",
 		"axios": "^1.5.1",

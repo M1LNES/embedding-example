@@ -17,7 +17,6 @@ import {
 } from '../constants/api-messages'
 const PreJSONType = prejson.PreJSONType
 const PreJSONContext = prejson.PreJSONContext
-
 /**
  * @param {number} boardID Board ID.
  * @param {number} widgetID Widget ID.

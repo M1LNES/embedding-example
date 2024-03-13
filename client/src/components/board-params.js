@@ -1,6 +1,6 @@
 export const chart1Params = [
 	{
-		value: 'P30D/now[sD]',
+		value: 'P60D/now[sD]',
 		name: 'daterange',
 		type: 'daterange',
 	},
@@ -33,7 +33,7 @@ export const chart1Params = [
 
 export const charListeningParams = [
 	{
-		value: 'P30D/now',
+		value: 'P60D/now',
 		name: 'daterange',
 		type: 'daterange',
 	},

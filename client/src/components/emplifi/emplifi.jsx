@@ -14,7 +14,7 @@ import { charListeningParams, chart1Params } from '../board-params'
 import Widget from '../../../../lib/client/components/widget'
 
 const Emplifi = () => {
-	const [selectBoxValue, setSelectBoxValue] = useState('P30D/now[sD]')
+	const [selectBoxValue, setSelectBoxValue] = useState('P60D/now[sD]')
 
 	const handleChange = (e) => {
 		setSelectBoxValue(e.target.value)
@@ -445,9 +445,9 @@ const Emplifi = () => {
 									label='Date Range'
 									onChange={handleChange}
 								>
-									<MenuItem value={'P30D/now[sD]'}>Last 30 Days</MenuItem>
 									<MenuItem value={'P60D/now[sD]'}>Last 60 Days</MenuItem>
 									<MenuItem value={'P90D/now[sD]'}>Last 90 days</MenuItem>
+									<MenuItem value={'P120D/now[sD]'}>Last 120 Days</MenuItem>
 								</Select>
 							</FormControl>
 						</Grid>

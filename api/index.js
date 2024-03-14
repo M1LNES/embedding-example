@@ -3,8 +3,8 @@ const cors = require('cors')
 const path = require('path')
 
 const historyApiFallback = require('express-history-api-fallback')
-const devHistoryApiFallback = require('../lib/server/dev-history-api-fallback')
-const apiRouter = require('../lib/server/api-router')
+const devHistoryApiFallback = require('../lib/src/server/dev-history-api-fallback')
+const apiRouter = require('../lib/src/server/api-router')
 
 const app = express()
 app.use(cors())

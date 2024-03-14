@@ -3,7 +3,8 @@ import GitHubIcon from '@mui/icons-material/GitHub'
 import XIcon from '@mui/icons-material/X'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import { board_avg } from './board-params'
-import Widget from '../../../lib/client/components/widget'
+import { Widget } from '../../../lib/src'
+
 // import { community_comands } from './board-params'
 
 const TestPage = () => {

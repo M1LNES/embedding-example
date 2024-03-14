@@ -15,7 +15,7 @@ To be able to fetch data from APIs, you need to add into .env file (or enviromen
 
 ```env title=".env"
 ACCESS_TOKEN=GUlQXNIXorLqlTAlTR3Ptj5BYVs-Ps_ADzM-QvRxWPs
-OMNI_API_TOKEN=WOFrkcJTBBZHRqaHzyCd284-fC490DJ5PKLZiC9KyoH
+OMNI_API_TOKEN=ZnU7lNwYd1nCgVJFyO1qYdKJw9IaZVq5EUxYedRp93O
 PACKAGE_URL=https://3348d0628f75ab43fe445e17eb650c1b.sbksapps.com/3/packages/analytics/bundle.js
 ```
 

@@ -14,7 +14,7 @@ Create new project build by `webpack` or edit the existing one. Make sure that y
 To be able to fetch data from APIs, you need to add into .env file (or enviroment varaibles furing deploy) two tokens - `ACCESS_TOKEN` for Emplifi Public API and `OMNI_API_TOKEN` for Omni Studio API. Both of these tokens needs to be valid. You also need to specify `PACKAGE_URL` which is endpoint for downloading minimalized versions of libraries.
 
 ```env title=".env"
-ACCESS_TOKEN=GUlQXNIXorLqlTAlTR3Ptj5BYVs-Ps_ADzM-QvRxWPs
+ACCESS_TOKEN=4eYo9qFmZw2oRXtZnIyOHhUy3TlPLp2JbrsA1MRc7Fx
 OMNI_API_TOKEN=ZnU7lNwYd1nCgVJFyO1qYdKJw9IaZVq5EUxYedRp93O
 PACKAGE_URL=https://3348d0628f75ab43fe445e17eb650c1b.sbksapps.com/3/packages/analytics/bundle.js
 ```

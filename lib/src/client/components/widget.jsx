@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react'
-import { prejson } from '../../../../assets/embedding'
+import { prejson } from '../../../assets/embedding'
 import {
 	fetchWidgetData,
 	fetchDataAllRequests,

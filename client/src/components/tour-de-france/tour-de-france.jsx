@@ -2,7 +2,7 @@ import React from 'react'
 import { Box, Divider, Grid } from '@mui/material'
 import { board_avg, community_comands } from '../board-params'
 import Template from './template'
-import { Widget } from '../../../../lib/src'
+import { Widget } from '../../../../lib/dist/empli-embed'
 
 const TourDeFrance = () => {
 	return (

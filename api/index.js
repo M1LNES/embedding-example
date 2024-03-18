@@ -1,10 +1,9 @@
 const express = require('express')
 const cors = require('cors')
 const path = require('path')
+const { routes, devHistoryApiFallback } = require('../lib/src/backend')
 
 const historyApiFallback = require('express-history-api-fallback')
-const devHistoryApiFallback = require('../lib/src/server/dev-history-api-fallback')
-const apiRouter = require('../lib/src/server/api-router')
 
 const app = express()
 app.use(cors())
@@ -17,7 +16,7 @@ const DIST_DIR = path.resolve(__dirname, '../dist')
 
 const start = () => {
 	let wdMiddleware = null
-	app.use('/api', apiRouter)
+	app.use('/api', routes)
 
 	if (process.env.NODE_ENV === 'production') {
 		app.use('/vendor', express.static(path.resolve(DIST_DIR, 'vendor')))

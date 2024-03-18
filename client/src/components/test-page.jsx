@@ -3,7 +3,7 @@ import GitHubIcon from '@mui/icons-material/GitHub'
 import XIcon from '@mui/icons-material/X'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import { board_avg } from './board-params'
-import { Widget } from '../../../lib/src'
+import { Widget } from '../../../lib/dist/empli-embed'
 
 // import { community_comands } from './board-params'
 

@@ -3,7 +3,7 @@
 set -o errexit
 set -o pipefail
 
-mkdir -p assets # ensure the assets directory exists
+mkdir -p ./lib/assets # ensure the assets directory exists
 
 # For DEV execution - parses env variables from .env file.
 
@@ -13,4 +13,4 @@ mkdir -p assets # ensure the assets directory exists
 # For deployment - takes env variables from global variables.
 ACCESS_TOKEN=$ACCESS_TOKEN
 PACKAGE_URL=$PACKAGE_URL
-curl -H "Authorization: Bearer ${ACCESS_TOKEN}" -o ./assets/embedding.js ${PACKAGE_URL}
+curl -H "Authorization: Bearer ${ACCESS_TOKEN}" -o ./lib/assets/embedding.js ${PACKAGE_URL}

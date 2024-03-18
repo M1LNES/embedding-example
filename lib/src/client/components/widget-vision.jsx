@@ -3,7 +3,7 @@ import WidgetConfig from './widget-config'
 import WidgetConfigRevealed from './widget-config-revealed'
 import { object, bool, array, oneOfType } from 'prop-types'
 import { Box, Stack, Tooltip } from '@mui/material'
-import { vision } from '../../../../assets/embedding'
+import { vision } from '../../../assets/embedding'
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline'
 
 const Vision = vision.Vision

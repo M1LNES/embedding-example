@@ -9,7 +9,7 @@
 		"build": "cd lib && NODE_ENV=production webpack --config ./webpack.config.js && cd .. && NODE_ENV=production webpack --config ./webpack.config.js",
 		"start": "NODE_ENV=production node $NODE_DEFAULT_OPTIONS ./api/index.js",
 		"heroku-postbuild": "npm run build",
-		"postinstall": "./scripts/postinstall.sh",
+		"postinstall": "./lib/scripts/postinstall.sh",
 		"test": "react-scripts test"
 	},
 	"keywords": [],

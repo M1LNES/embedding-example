@@ -1,8 +1,8 @@
 const express = require('express')
 const cors = require('cors')
 const path = require('path')
-const { routes, devHistoryApiFallback } = require('../lib/src/backend')
-
+const { routes } = require('../lib/dist/empli-embed-backend')
+const devHistoryApiFallback = require('../dev-history-api-fallback')
 const historyApiFallback = require('express-history-api-fallback')
 
 const app = express()

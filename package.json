@@ -6,7 +6,7 @@
 	"private": true,
 	"scripts": {
 		"dev": "node ./api/index.js ",
-		"build": "cd lib && NODE_ENV=production webpack --config ./webpack.config.js && cd .. && NODE_ENV=production webpack --config ./webpack.config.js",
+		"build": "NODE_ENV=production webpack --config ./webpack.config.js",
 		"start": "NODE_ENV=production node $NODE_DEFAULT_OPTIONS ./api/index.js",
 		"heroku-postbuild": "npm run build",
 		"postinstall": "./lib/scripts/postinstall.sh",
@@ -26,6 +26,7 @@
 		"chai": "^5.1.0",
 		"cors": "^2.8.5",
 		"dotenv": "^16.3.1",
+		"empli-embed": "^1.0.1-alpha.1.2",
 		"enzyme": "^3.11.0",
 		"express": "^4.18.2",
 		"express-history-api-fallback": "^2.2.1",

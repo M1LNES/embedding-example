@@ -11,7 +11,7 @@ import {
 	Stack,
 } from '@mui/material'
 import { charListeningParams, chart1Params } from '../board-params'
-import { Widget } from '../../../../lib/dist/empli-embed'
+import { Widget } from 'empli-embed'
 
 const Emplifi = () => {
 	const [selectBoxValue, setSelectBoxValue] = useState('P60D/now[sD]')

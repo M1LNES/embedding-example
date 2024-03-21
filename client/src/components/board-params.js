@@ -135,16 +135,6 @@ export const community_comands = [
 
 export const board_avg = [
 	{
-		value: {
-			title: 'Average: All hours',
-			value: 'avg_all_hours',
-			aggregation: 'avg',
-			hours: 'all-hours',
-		},
-		name: 'responseTimeConfig',
-		type: 'object',
-	},
-	{
 		value: 'P1Y/now[sY]',
 		name: 'daterange',
 		type: 'daterange',
@@ -162,58 +152,13 @@ export const board_avg = [
 	{
 		value: [
 			{
-				value: '381443886037593',
-				title: 'Salomon Store Madrid',
+				value: '17841400532290727',
+				title: 'Salomon Freeski',
 				picture:
-					'https://scontent-sea1-1.xx.fbcdn.net/v/t39.30808-1/356051315_980815946596969_583284026175324862_n.jpg?stp=dst-jpg_p200x200&_nc_cat=106&ccb=1-7&_nc_sid=4da83f&_nc_ohc=qPRImxVoAv8AX-evg-a&_nc_ht=scontent-sea1-1.xx&edm=AJdBtusEAAAA&oh=00_AfBBIKX57lo7pHZhJqCcotbylqBaNSCOOqcu4uK3MNdqHg&oe=65E3EEDF',
-				link: 'https://www.facebook.com/SalomonStoreMadrid',
-				network: 'facebook',
-				screenName: 'SalomonStoreMadrid',
-			},
-			{
-				value: '235862609914838',
-				title: 'Salomon Hellas',
-				picture:
-					'https://scontent-sea1-1.xx.fbcdn.net/v/t39.30808-1/306277032_2190414877792925_1266017756509046562_n.jpg?stp=dst-jpg_p200x200&_nc_cat=100&ccb=1-7&_nc_sid=4da83f&_nc_ohc=g547mBkBdCQAX8v8cHK&_nc_ht=scontent-sea1-1.xx&edm=AJdBtusEAAAA&oh=00_AfD5gyIMEeg8BClRvs3_p8KuMNAcbrWr7Q0eZwBcAsji7w&oe=65E3854C',
-				link: 'https://www.facebook.com/salomonhellas',
-				network: 'facebook',
-				screenName: 'salomonhellas',
-			},
-			{
-				value: '257484707608796',
-				title: 'Salomon',
-				picture:
-					'https://scontent-sea1-1.xx.fbcdn.net/v/t39.30808-1/306127095_5855467864477091_3401318856866070808_n.jpg?stp=dst-jpg_p200x200&_nc_cat=105&ccb=1-7&_nc_sid=4da83f&_nc_ohc=XhQntrwFCVsAX_aopHS&_nc_ht=scontent-sea1-1.xx&edm=AJdBtusEAAAA&oh=00_AfAgw_BvvOd2kPA4oFvq6ovSK77D2c1_8YXwohfhCJ20Yg&oe=65E398D9',
-				link: 'https://www.facebook.com/salomonsouthafrica',
-				network: 'facebook',
-				screenName: 'salomonsouthafrica',
-			},
-			{
-				value: '228378897804',
-				title: 'Salomon Argentina',
-				picture:
-					'https://scontent-sea1-1.xx.fbcdn.net/v/t39.30808-1/298773717_10159051231452805_5650694120826884829_n.jpg?stp=dst-jpg_p200x200&_nc_cat=106&ccb=1-7&_nc_sid=4da83f&_nc_eui2=AeGxCzORNdau-y9v6HyNUJyOBSEUXQsIBXkFIRRdCwgFeXMqmOYxKVhJLQdLlucCW-ppJDyptfHt7pMHmeFPAlGy&_nc_ohc=UkBDvJtxxYUAX8cz_XF&_nc_ht=scontent-sea1-1.xx&edm=AJdBtusEAAAA&oh=00_AfABL9n7kFeyEu_i-pSxYSBRJEzGynuVkeraS84AdGVUrQ&oe=65E3717C',
-				link: 'https://www.facebook.com/SalomonArgentinaOficial',
-				network: 'facebook',
-				screenName: 'SalomonArgentinaOficial',
-			},
-			{
-				value: '205623716466262',
-				title: 'Salomon Taiwan',
-				picture:
-					'https://scontent-sea1-1.xx.fbcdn.net/v/t39.30808-1/306783207_1727285254300093_6976722923823921696_n.jpg?stp=dst-jpg_p200x200&_nc_cat=106&ccb=1-7&_nc_sid=4da83f&_nc_ohc=3bGwqDBA-sYAX_1JJKt&_nc_ht=scontent-sea1-1.xx&edm=AJdBtusEAAAA&oh=00_AfDgk6evcy2PuCAdUiGF1MfxphZGSaI5pV4JNgMAqbQsCw&oe=65E4850C',
-				link: 'https://www.facebook.com/salomon.tw',
-				network: 'facebook',
-				screenName: 'salomon.tw',
-			},
-			{
-				value: '1375172106064190',
-				title: 'Salomon Philippines',
-				picture:
-					'https://scontent-sea1-1.xx.fbcdn.net/v/t39.30808-1/305659306_3241841622730553_1272144547067209385_n.jpg?stp=dst-jpg_p200x200&_nc_cat=109&ccb=1-7&_nc_sid=4da83f&_nc_ohc=Xyy-i2T1LbcAX_AhOmI&_nc_ht=scontent-sea1-1.xx&edm=AJdBtusEAAAA&oh=00_AfDKjcidH8IuyWV7sj0ZFNjqiXAlX3VDCKQU0RgPLb5ejA&oe=65E349F3',
-				link: 'https://www.facebook.com/salomonphilippines',
-				network: 'facebook',
-				screenName: 'salomonphilippines',
+					'https://scontent-sea1-1.xx.fbcdn.net/v/t51.2885-15/306383024_102423392594344_4478915198864550402_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=7d201b&_nc_ohc=r1kXCpB8m3IAX8akdOx&_nc_ht=scontent-sea1-1.xx&edm=AL-3X8kEAAAA&oh=00_AfDC9vNg3auinb66lUfkvYRpXtAL_H8_BnCIcHbF1KYV4g&oe=66011600',
+				link: 'https://www.instagram.com/salomonfreeski',
+				network: 'instagram',
+				screenName: 'salomonfreeski',
 			},
 		],
 		name: 'cpProfiles',

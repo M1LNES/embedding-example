@@ -25,7 +25,7 @@
 		"chai": "^5.1.0",
 		"cors": "^2.8.5",
 		"dotenv": "^16.3.1",
-		"empli-embed": "^1.0.1-alpha.1.17",
+		"empli-embed": "^1.0.1-alpha.1.26",
 		"enzyme": "^3.11.0",
 		"express": "^4.18.2",
 		"express-history-api-fallback": "^2.2.1",

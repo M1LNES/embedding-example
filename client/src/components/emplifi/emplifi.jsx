@@ -275,8 +275,8 @@ const Emplifi = () => {
 					<Grid container spacing={2}>
 						<Grid item xs={12} sm={6}>
 							<Widget
-								boardID={795}
-								widgetID={48004}
+								boardID={4305}
+								widgetID={79891}
 								params={charListeningParams}
 								style={{
 									borderStyle: 'solid',
@@ -334,8 +334,8 @@ const Emplifi = () => {
 						</Grid>
 						<Grid item xs={12} sm={6}>
 							<Widget
-								boardID={795}
-								widgetID={48018}
+								boardID={4305}
+								widgetID={79873}
 								params={charListeningParams}
 								style={{
 									borderStyle: 'solid',
@@ -346,8 +346,8 @@ const Emplifi = () => {
 						</Grid>
 						<Grid item xs={12} sm={6}>
 							<Widget
-								boardID={795}
-								widgetID={48000}
+								boardID={4305}
+								widgetID={79890}
 								params={charListeningParams}
 								style={{
 									borderStyle: 'solid',
@@ -415,8 +415,8 @@ const Emplifi = () => {
 						</Grid>
 						<Grid item xs={12} sm={6}>
 							<Widget
-								boardID={795}
-								widgetID={48009}
+								boardID={4305}
+								widgetID={79869}
 								params={charListeningParams}
 								style={{
 									borderStyle: 'solid',
@@ -464,14 +464,14 @@ const Emplifi = () => {
 						height={450}
 					>
 						<Widget
-							boardID={795}
+							boardID={2197}
 							style={{
 								borderStyle: 'solid',
 								flex: 1,
 								borderRadius: '20px',
 								padding: '10px',
 							}}
-							widgetID={48021}
+							widgetID={35923}
 							params={[
 								{
 									value: selectBoxValue,
@@ -479,32 +479,41 @@ const Emplifi = () => {
 									type: 'daterange',
 								},
 								{
-									value: 'Europe/Prague',
-									name: 'userTimezone',
+									value: '172196',
+									name: 'acl_account_id',
+									type: 'string',
+								},
+								{
+									value: '213866',
+									name: 'user_acl_id',
 									type: 'string',
 								},
 								{
 									value: [
 										{
-											value: 'LNQ_172196_64de627a6b3f096777cfb00b',
-											title: 'cz sk pro spike',
-											status: 'topic_custom_mention_limit',
+											value: '164929129743',
+											title: 'Emplifi',
+											picture:
+												'https://scontent-sea1-1.xx.fbcdn.net/v/t39.30808-1/355016801_661576652675049_7066463062716805627_n.png?stp=dst-png_p200x200&_nc_cat=100&ccb=1-7&_nc_sid=5f2048&_nc_ohc=B5pzGfpSKDAQ7kNvgHfSK5r&_nc_ht=scontent-sea1-1.xx&edm=AJdBtusEAAAA&oh=00_AfAzc-3KZBUxhyi4JGwhJgE1OuSflXwfwEegBhT0Yodhmg&oe=663CE4E6',
+											link: 'https://www.facebook.com/Emplifi',
+											network: 'facebook',
+											screenName: 'Emplifi',
 										},
 									],
-									name: 'listeningQueries',
+									name: 'fbProfiles',
 									type: 'array',
 								},
 							]}
 						/>
 						<Widget
-							boardID={795}
+							boardID={2197}
 							style={{
 								borderStyle: 'solid',
 								flex: 1,
 								borderRadius: '20px',
 								padding: '10px',
 							}}
-							widgetID={48006}
+							widgetID={35916}
 							params={[
 								{
 									value: selectBoxValue,
@@ -512,19 +521,28 @@ const Emplifi = () => {
 									type: 'daterange',
 								},
 								{
-									value: 'Europe/Prague',
-									name: 'userTimezone',
+									value: '172196',
+									name: 'acl_account_id',
+									type: 'string',
+								},
+								{
+									value: '213866',
+									name: 'user_acl_id',
 									type: 'string',
 								},
 								{
 									value: [
 										{
-											value: 'LNQ_172196_64de627a6b3f096777cfb00b',
-											title: 'cz sk pro spike',
-											status: 'topic_custom_mention_limit',
+											value: '164929129743',
+											title: 'Emplifi',
+											picture:
+												'https://scontent-sea1-1.xx.fbcdn.net/v/t39.30808-1/355016801_661576652675049_7066463062716805627_n.png?stp=dst-png_p200x200&_nc_cat=100&ccb=1-7&_nc_sid=5f2048&_nc_ohc=B5pzGfpSKDAQ7kNvgHfSK5r&_nc_ht=scontent-sea1-1.xx&edm=AJdBtusEAAAA&oh=00_AfAzc-3KZBUxhyi4JGwhJgE1OuSflXwfwEegBhT0Yodhmg&oe=663CE4E6',
+											link: 'https://www.facebook.com/Emplifi',
+											network: 'facebook',
+											screenName: 'Emplifi',
 										},
 									],
-									name: 'listeningQueries',
+									name: 'fbProfiles',
 									type: 'array',
 								},
 							]}

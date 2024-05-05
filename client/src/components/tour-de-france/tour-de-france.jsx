@@ -75,8 +75,8 @@ const TourDeFrance = () => {
 				<Grid container spacing={3} style={{ height: '100%' }}>
 					<Grid item xs={3}>
 						<Widget
-							boardID={2198}
-							widgetID={35944}
+							boardID={4304}
+							widgetID={79854}
 							params={community_comands}
 							style={{
 								borderStyle: 'double',
@@ -88,8 +88,8 @@ const TourDeFrance = () => {
 					</Grid>
 					<Grid item xs={3}>
 						<Widget
-							boardID={2198}
-							widgetID={35945}
+							boardID={4304}
+							widgetID={79859}
 							params={community_comands}
 							style={{
 								borderStyle: 'double',
@@ -101,8 +101,8 @@ const TourDeFrance = () => {
 					</Grid>
 					<Grid item xs={3}>
 						<Widget
-							boardID={2198}
-							widgetID={35938}
+							boardID={4304}
+							widgetID={79857}
 							params={community_comands}
 							style={{
 								borderStyle: 'double',
@@ -114,8 +114,8 @@ const TourDeFrance = () => {
 					</Grid>
 					<Grid item xs={3}>
 						<Widget
-							boardID={2198}
-							widgetID={35934}
+							boardID={4304}
+							widgetID={79856}
 							params={community_comands}
 							style={{
 								borderStyle: 'double',
@@ -178,8 +178,8 @@ const TourDeFrance = () => {
 				<Grid container spacing={4} style={{ height: '100%' }}>
 					<Grid item xs={6} style={{ height: '50%' }}>
 						<Widget
-							boardID={2198}
-							widgetID={35939}
+							boardID={4304}
+							widgetID={79862}
 							params={community_comands}
 							style={{
 								borderStyle: 'groove',
@@ -191,8 +191,8 @@ const TourDeFrance = () => {
 					</Grid>
 					<Grid item xs={6} style={{ height: '50%' }}>
 						<Widget
-							boardID={2198}
-							widgetID={35941}
+							boardID={4304}
+							widgetID={79866}
 							params={community_comands}
 							style={{
 								borderStyle: 'groove',
@@ -204,8 +204,8 @@ const TourDeFrance = () => {
 					</Grid>
 					<Grid item xs={6} style={{ height: '50%' }}>
 						<Widget
-							boardID={2198}
-							widgetID={35943}
+							boardID={4304}
+							widgetID={79861}
 							params={community_comands}
 							style={{
 								borderStyle: 'groove',
@@ -217,8 +217,8 @@ const TourDeFrance = () => {
 					</Grid>
 					<Grid item xs={6} style={{ height: '50%' }}>
 						<Widget
-							boardID={2198}
-							widgetID={35932}
+							boardID={4304}
+							widgetID={79863}
 							params={community_comands}
 							style={{
 								borderStyle: 'groove',
@@ -234,9 +234,15 @@ const TourDeFrance = () => {
 				<Grid container spacing={5}>
 					<Grid item xs={12} sm={6}>
 						<Widget
-							boardID={2198}
-							widgetID={35931}
-							params={community_comands}
+							boardID={1684}
+							widgetID={25633}
+							params={[
+								{
+									value: 'P30D/now[sD]',
+									name: 'cas',
+									type: 'daterange',
+								},
+							]}
 							style={{
 								borderStyle: 'ridge',
 								flex: 1,
@@ -270,9 +276,15 @@ const TourDeFrance = () => {
 					<Grid item xs={12} sm={6}>
 						<Box display='flex' flexDirection='row' height='100%'>
 							<Widget
-								boardID={2198}
-								widgetID={35930}
-								params={board_avg}
+								boardID={1684}
+								widgetID={25623}
+								params={[
+									{
+										value: 'P30D/now[sD]',
+										name: 'cas',
+										type: 'daterange',
+									},
+								]}
 								style={{
 									borderStyle: 'ridge',
 									borderRadius: '20px',
@@ -282,9 +294,15 @@ const TourDeFrance = () => {
 								}}
 							/>
 							<Widget
-								boardID={2198}
-								widgetID={35926}
-								params={community_comands}
+								boardID={1684}
+								widgetID={25630}
+								params={[
+									{
+										value: 'P30D/now[sD]',
+										name: 'cas',
+										type: 'daterange',
+									},
+								]}
 								style={{
 									borderStyle: 'ridge',
 									borderRadius: '20px',
